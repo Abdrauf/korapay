@@ -1,0 +1,25 @@
+{
+  "name": "korapay",
+  "version": "1.0.0",
+  "description": "KORAPAY TECHNICAL TEST",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "korapay",
+    "automation"
+  ],
+  "author": "ABDRAUF SEGUN",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.1.0",
+    "cypress-cucumber-preprocessor": "^4.0.3",
+    "prettier": "^2.2.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
