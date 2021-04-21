@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "npx cypress open",
-    "cy:run": "npx cypress run"
+    "cy:run": "npx cypress run",
+    "chrome":"cypress run  --headless --browser chrome",
+    "firefox":"cypress run  --headless --browser firefox",
+    "edge":"cypress run  --headless --browser edge"
   },
   "keywords": [
     "cypress",
