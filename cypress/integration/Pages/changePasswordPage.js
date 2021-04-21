@@ -13,10 +13,10 @@ class changePassword{
         cy.get(securityLink).click({force:true})
     }
     static enterOldPassword(){
-        cy.get(oldPassword).click().type('M@thematics11',{log:false})
+        cy.get(oldPassword).type('M@thematics11',{log:false})
     }
     static enterNewPassword(){
-        cy.get(newPassword).click().type('M@th3m@tics',{log:false})
+        cy.get(newPassword).type('M@th3m@tics',{log:false})
     }
     static clickChangePassword(){
         cy.get(changePasswordBtn).click()
