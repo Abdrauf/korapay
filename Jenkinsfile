@@ -2,8 +2,7 @@ node('master') {
 
     stage("Git checkout"){
 
-git credentialsId: 'ae1d3cc1-3637-402c-ae52-6a8fa5794c03', url: 'https://shegmovic@bitbucket.org/realshegmovic/twucypress.git'
-
+git credentialsId: 'c4205323-db4a-4fea-a6e1-91a00204581a', url: 'https://github.com/Abdrauf/korapay.git'
     }
 
     stage("NPM Package"){
