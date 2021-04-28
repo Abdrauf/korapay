@@ -1,5 +1,6 @@
 const profileLink = '.dashboard_nav_profile'
 const securityLink = '[href="/dashboard/settings/security"]'
+const checkBox = '.password_security_change'
 const oldPassword = '.old_password_form > input'
 const newPassword = '.new_password_form > input'
 const changePasswordBtn = '.password_security_change > form > .btn_cont > .button'
@@ -11,6 +12,7 @@ class changePassword{
     }
     static clickSecurity(){
         cy.get(securityLink).click({force:true})
+        cy.get(checkBox).click()
     }
     static enterOldPassword(){
         cy.get(oldPassword).type('M@thematics11',{log:false})

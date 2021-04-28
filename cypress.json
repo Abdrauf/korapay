@@ -1,9 +1,31 @@
 {
-  "defaultCommandTimeout": 120000,
-  "pageLoadTimeout": 120000,
+  "testFiles": "**/*.feature",
   "ignoreTestFiles": [
     "*.js",
+    "*.ts",
     "*.md"
   ],
-  "testFiles": "**/*.feature"
+  "viewportWidth": 1360,
+  "viewportHeight": 790,
+  "video": true,
+  "pageLoadTimeout": 1000000,
+  "theme": "halloween",
+  "darkMediaQuery": false,
+  "projectId": "6b42c7",
+  "chromeWebSecurity": false,
+  "retries": 0,
+
+
+
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": true,
+      "overwrite": false,
+      "html": false,
+      "json": true
+    }
+  }
 }
