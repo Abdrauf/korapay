@@ -7,7 +7,7 @@ const yourEmail= ':nth-child(4) > input'
 const yourPassword= ':nth-child(5) > input'
 const yourConfirmPassword = ':nth-child(6) > input'
 const createAccount = '.button'
-const appLogo = '.logo > img'
+//const appLogo = '.logo > img'
 const userHeader = '.h1'
 
 
@@ -33,7 +33,7 @@ class signUp{
         cy.get(createAccount).click()
     }
     static assertDashboard(){
-        cy.get(appLogo).should("contain.text", 'alphaPay')
+       // cy.get(appLogo).should("contain.text", 'alphaPay')
         cy.get(userHeader).should("contain.text", yourUserName)
 
 
