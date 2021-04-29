@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-04-29T09:43:13.077Z",
+    "end": "2021-04-29T09:43:34.719Z",
+    "duration": 21642,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "510bc654-ee0c-48d6-b7b9-5c76b85177c3",
+      "title": "",
+      "fullFile": "cypress/integration/LogOut.feature",
+      "file": "cypress/integration/LogOut.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cfd87f06-863f-4ce0-ab0c-dd98123a574f",
+          "title": "Sign Out",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User must have logged in successfully",
+              "fullTitle": "Sign Out User must have logged in successfully",
+              "timedOut": null,
+              "duration": 15860,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.go1415219401`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.go1415219401`, but never found it.\n    at Function.assertDashboard (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\LogOut.feature:186:33)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\LogOut.feature:59:25)\n    at Context.resolveAndRunStepDefinition (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\LogOut.feature:10612:9)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\LogOut.feature:9955:35)",
+                "diff": null
+              },
+              "uuid": "876550b7-caef-4c64-a3a7-9dbc2e6d8043",
+              "parentUUID": "cfd87f06-863f-4ce0-ab0c-dd98123a574f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "876550b7-caef-4c64-a3a7-9dbc2e6d8043"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 15860,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

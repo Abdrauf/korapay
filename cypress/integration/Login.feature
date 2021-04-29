@@ -10,6 +10,6 @@ Feature: Authentication
     Then User click sign in
     And Inputs Email as "ade@mailinator.com" and password as "M@thematics11"
     Then User clicks on login button
-    And I wait for 5000 milliseconds
+    And I wait for 7000 milliseconds
     Then User should be redirected to the dashboard
-    And I wait for 5000 milliseconds
+    And I wait for 7000 milliseconds

@@ -1,9 +1,9 @@
-Feature: Sign Out
+Feature: Log Out
 
 
 
   As a User
-  I should be able to login and Sign Out
+  I should be able to login and Log Out
 
 
 
@@ -12,9 +12,9 @@ Feature: Sign Out
     Then User click sign in
     And Inputs Email as "ade@mailinator.com" and password as "M@thematics11"
     Then User clicks on login button
-    And I wait for 5000 milliseconds
+    And I wait for 7000 milliseconds
     Then User should be redirected to the dashboard
-    And I wait for 5000 milliseconds
+    And I wait for 7000 milliseconds
 
   Scenario: User must have logged in successfully
     Then Click Profile Page

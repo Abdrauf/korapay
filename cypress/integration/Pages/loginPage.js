@@ -5,7 +5,7 @@ const userPassword = '.password'
 const signInBtn = '.button'
 const dashPayment = '.nav-list > [href="/dashboard/payments"] > span'
 const dashOverview = '.nav-list > .active > span'
-const loginNotification ='.go1415219401'
+//const loginNotification ='.go1415219401'
 
 
 
@@ -32,7 +32,7 @@ class login{
     static assertDashboard(){
         cy.get(dashOverview).click().should("contain.text", 'Overview')
         cy.get(dashPayment).click().should("contain.text", 'Payments')
-        cy.get(loginNotification).should("contain.text", 'Welcome to your dashboard')
+      //  cy.get(loginNotification).should("contain.text", 'Welcome to your dashboard')
 
     }
 

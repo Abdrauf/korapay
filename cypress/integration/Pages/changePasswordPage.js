@@ -18,7 +18,7 @@ class changePassword{
         cy.get(oldPassword).type('M@thematics11',{log:false})
     }
     static enterNewPassword(){
-        cy.get(newPassword).type('M@th3m@tics',{log:false})
+        cy.get(newPassword).type('M@thematics11',{log:false})
     }
     static clickChangePassword(){
         cy.get(changePasswordBtn).click()
