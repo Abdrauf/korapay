@@ -18,6 +18,7 @@ git credentialsId: 'c4205323-db4a-4fea-a6e1-91a00204581a', url: 'https://github.
     }
         stage("Generate Test Report") {
 
+         script: 'npm run clean:reports'
          script: 'npm run merge:reports'
           script: 'npm run create:html:report'
 

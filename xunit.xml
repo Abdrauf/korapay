@@ -1,8 +1,3 @@
-<testsuite name="Mocha Tests" tests="1" failures="0" errors="1" skipped="0" timestamp="Thu, 29 Apr 2021 05:16:58 GMT" time="45.678">
-<testcase classname="Update Profile" name="User must have logged in successfully" time="0"><failure>Timed out retrying after 4000ms: Expected to find element: &#x60;.nav-list &#x3E; .active &#x3E; span&#x60;, but never found it.
-AssertionError: Timed out retrying after 4000ms: Expected to find element: &#x60;.nav-list &#x3E; .active &#x3E; span&#x60;, but never found it.
-    at Function.assertDashboard (https://alphapay.netlify.app/__cypress/tests?p=cypress\integration\UpdateProfile.feature:204:10)
-    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\integration\UpdateProfile.feature:121:25)
-    at Context.resolveAndRunStepDefinition (https://alphapay.netlify.app/__cypress/tests?p=cypress\integration\UpdateProfile.feature:10632:9)
-    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\integration\UpdateProfile.feature:9975:35)</failure></testcase>
+<testsuite name="Mocha Tests" tests="1" failures="0" errors="0" skipped="0" timestamp="Mon, 03 May 2021 14:27:11 GMT" time="37.117">
+<testcase classname="Update Profile" name="User must have logged in successfully" time="31.069"/>
 </testsuite>

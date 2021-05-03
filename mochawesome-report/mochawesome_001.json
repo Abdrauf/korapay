@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2021-04-29T09:47:40.434Z",
-    "end": "2021-04-29T09:48:14.450Z",
-    "duration": 34016,
+    "start": "2021-05-03T20:31:17.560Z",
+    "end": "2021-05-03T20:32:01.987Z",
+    "duration": 44427,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,27 +18,27 @@
   },
   "results": [
     {
-      "uuid": "110f9d55-e3af-46f3-9b1f-4cb64568cde3",
+      "uuid": "1e74282f-c29e-4a39-a8fe-d5f52f5ccfcd",
       "title": "",
-      "fullFile": "cypress/integration/UpdateProfile.feature",
-      "file": "cypress/integration/UpdateProfile.feature",
+      "fullFile": "cypress/integration/Login.feature",
+      "file": "cypress/integration/Login.feature",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "e458d556-bef1-45b5-8716-13677de8aa8b",
-          "title": "Update Profile",
+          "uuid": "76822129-de7c-4751-ba79-2c13044e5f57",
+          "title": "Authentication",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "User must have logged in successfully",
-              "fullTitle": "Update Profile User must have logged in successfully",
+              "title": "A User should be able Login",
+              "fullTitle": "Authentication A User should be able Login",
               "timedOut": null,
-              "duration": 28862,
+              "duration": 31430,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {},
-              "uuid": "785978be-f4aa-430f-8297-2dbe2090694f",
-              "parentUUID": "e458d556-bef1-45b5-8716-13677de8aa8b",
+              "uuid": "ec2417f7-0a1a-4566-8eeb-11ce8fd2ef39",
+              "parentUUID": "76822129-de7c-4751-ba79-2c13044e5f57",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "785978be-f4aa-430f-8297-2dbe2090694f"
+            "ec2417f7-0a1a-4566-8eeb-11ce8fd2ef39"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 28862,
+          "duration": 31430,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,9 +94,6 @@
     },
     "marge": {
       "options": {
-        "id": "default",
-        "reportDir": "cypress/results/json",
-        "quite": true,
         "overwrite": false,
         "html": false,
         "json": true

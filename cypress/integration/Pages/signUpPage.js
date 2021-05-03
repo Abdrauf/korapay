@@ -22,10 +22,10 @@ class signUp{
     }
 
     static enterDetails(){
-        cy.get(yourFullName).type('Ade Texter', {log:false})
-        cy.get(yourUserName).type('Trek Star', {log:false})
-        cy.get(yourPhoneNumber).type('09009912333', {log:false})
-        cy.get(yourEmail).type('ade.text@mailinator.com', {log:false})
+        cy.get(yourFullName).type('Ade Piper', {log:false})
+        cy.get(yourUserName).type('Wanton Star', {log:false})
+        cy.get(yourPhoneNumber).type('09019912333', {log:false})
+        cy.get(yourEmail).type('ade.pay@mailinator.com', {log:false})
         cy.get(yourPassword).type('M@thematics11', {log:false})
         cy.get(yourConfirmPassword).type('M@thematics11', {log:false})
     }
@@ -33,7 +33,7 @@ class signUp{
         cy.get(createAccount).click()
     }
     static assertDashboard(){
-       // cy.get(appLogo).should("contain.text", 'alphaPay')
+       //cy.get(appLogo).should("contain.text", 'alphaPay')
         cy.get(userHeader).should("contain.text", yourUserName)
 
 

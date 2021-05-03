@@ -9,9 +9,9 @@
     "chrome": "cypress run  --headless --browser chrome",
     "firefox": "cypress run  --headless --browser firefox",
     "edge": "cypress run  --headless --browser edge",
-    "report:merge": "mochawesome-merge --reportDir cypress/results/json > cypress/results/mochawesome-bundle.json",
-    "report:generate": "marge cypress/results/mochawesome-bundle.json -o cypress/results/html",
-    "report:copyScreenshots": "cp -r cypress/screenshots cypress/results/html/screenshots"
+    "clean:reports": "rmdir /Q /S mochawesome-report",
+    "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress-tests-report.json",
+    "create:html:report": "marge --reportDir TestReport cypress-tests-report.json"
   },
   "keywords": [
     "cypress",
@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "cypress-dark": "^1.7.14",
+    "cypress-mochawesome-reporter": "^2.0.1",
     "cypress-multi-reporters": "^1.5.0",
     "mocha": "^8.3.2",
     "mochawesome": "^6.2.2",

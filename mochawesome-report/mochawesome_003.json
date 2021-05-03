@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2021-04-29T10:41:37.873Z",
-    "end": "2021-04-29T10:42:17.708Z",
-    "duration": 39835,
+    "start": "2021-05-03T20:37:16.675Z",
+    "end": "2021-05-03T20:38:10.078Z",
+    "duration": 53403,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "427b1fd3-ac6e-480b-b153-f0b931da93ed",
+      "uuid": "628de3b5-9387-40bd-991a-f999b30c49cc",
       "title": "",
       "fullFile": "cypress/integration/SignUp.feature",
       "file": "cypress/integration/SignUp.feature",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "679e7568-e80e-4be1-bea4-3857538a40b8",
+          "uuid": "b3ddd7ab-e09c-42e0-986f-3726234e47ad",
           "title": "Sign Up",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "I want to be able to sign Up",
               "fullTitle": "Sign Up I want to be able to sign Up",
               "timedOut": null,
-              "duration": 33771,
+              "duration": 43599,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: expected '<img>' to contain text 'alphaPay', but the text was ''",
-                "estack": "AssertionError: Timed out retrying after 4000ms: expected '<img>' to contain text 'alphaPay', but the text was ''\n    at Function.assertDashboard (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:72:23)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:139:26)\n    at Context.resolveAndRunStepDefinition (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:10567:9)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:9910:35)",
-                "diff": "+ 'alphaPay'\n"
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.h1`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.h1`, but never found it.\n    at Function.assertDashboard (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:73:26)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:139:26)\n    at Context.resolveAndRunStepDefinition (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:10567:9)\n    at Context.eval (https://alphapay.netlify.app/__cypress/tests?p=cypress\\integration\\SignUp.feature:9910:35)",
+                "diff": null
               },
-              "uuid": "7e5a2015-9ad2-411e-99e5-7c227e78cf48",
-              "parentUUID": "679e7568-e80e-4be1-bea4-3857538a40b8",
+              "uuid": "8d95fa6d-7099-4fdb-82cc-bfb70c7fb1f6",
+              "parentUUID": "b3ddd7ab-e09c-42e0-986f-3726234e47ad",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +60,11 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7e5a2015-9ad2-411e-99e5-7c227e78cf48"
+            "8d95fa6d-7099-4fdb-82cc-bfb70c7fb1f6"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 33771,
+          "duration": 43599,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -98,8 +98,6 @@
     },
     "marge": {
       "options": {
-        "id": "default",
-        "reportDir": "cypress/results/json",
         "overwrite": false,
         "html": false,
         "json": true

@@ -8,21 +8,18 @@
   "viewportWidth": 1360,
   "viewportHeight": 790,
   "video": true,
-  "pageLoadTimeout": 2000000,
+  "pageLoadTimeout": 1000000,
   "theme": "halloween",
   "darkMediaQuery": false,
-  "projectId": "6b42c7",
   "chromeWebSecurity": false,
   "retries": 0,
-  "reporter": "cypress-multi-reporters",
-  "reporterOptions": {
-    "configFile": "reporter-config.json"
+
+  "reporter": "../node_modules/mochawesome/src/mochawesome.js",
+  "reporterOptions" : {
+    "overwrite" : false,
+    "html" : false,
+    "json" : true
+
   }
 
 }
-
-
-
-
-
-
