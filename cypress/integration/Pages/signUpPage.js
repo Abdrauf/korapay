@@ -22,10 +22,10 @@ class signUp{
     }
 
     static enterDetails(){
-        cy.get(yourFullName).type('Ade Piper', {log:false})
-        cy.get(yourUserName).type('Wanton Star', {log:false})
-        cy.get(yourPhoneNumber).type('09019912333', {log:false})
-        cy.get(yourEmail).type('ade.pay@mailinator.com', {log:false})
+        cy.get(yourFullName).type('Adex Piper', {log:false})
+        cy.get(yourUserName).type('Wanton Stars', {log:false})
+        cy.get(yourPhoneNumber).type('09010912333', {log:false})
+        cy.get(yourEmail).type('ade.payo@mailinator.com', {log:false})
         cy.get(yourPassword).type('M@thematics11', {log:false})
         cy.get(yourConfirmPassword).type('M@thematics11', {log:false})
     }
