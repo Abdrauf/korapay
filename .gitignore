@@ -1,0 +1,4 @@
+node_modules
+.idea
+mochawesome-report
+cypress-tests-report.json
