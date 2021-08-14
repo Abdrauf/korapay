@@ -1,0 +1,16 @@
+{
+  "signUpLink": ".nav_item > a",
+  "yourFullName": ":nth-child(1) > input",
+  "yourUserName": ":nth-child(2) > input",
+  "yourPhoneNumber": ":nth-child(3) > input",
+  "yourEmail": ":nth-child(4) > input",
+  "yourPassword": ":nth-child(5) > input",
+  "yourConfirmPassword": ":nth-child(6) > input",
+  "createAccount": ".button",
+  "errorMessage": ".go1415219401",
+  "email_add": "ade@mailinator.com",
+  "Password": "Gr3@terthan",
+  "userName": "Greed",
+  "fname": "Ade Ade",
+  "phoneNumber": "09091230910"
+}

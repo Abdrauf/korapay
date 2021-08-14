@@ -1,20 +1,10 @@
-import {Given, Then} from "cypress-cucumber-preprocessor/steps";
-import loginPage from "../pages/loginPage";
+import {Given} from "cypress-cucumber-preprocessor/steps";
 
-Given(/^User visit the alphaPay application$/, function (){
-loginPage.visitUrl()
-});
 
-Then (/^User click sign in$/, function () {
-loginPage.clickSignIn()
-});
-Then (/^Inputs Email as "([^"]*)" and password as "([^"]*)"$/, function (Email, Password) {
-loginPage.inputUserCredentials(Email, Password)
-});
-Then (/^User clicks on login button$/, function () {
-loginPage.clickLogin()
-});
-
-Then (/^User should be redirected to the dashboard$/, function () {
-loginPage.assertDashboard()
+Given (/^User visit and Login to the alphaPay application$/, function () {
+    cy.visit('/');
+    cy.fixture('signIn').then((signIn)=>{
+        // created a custom command for login to reduce the lines of codes
+        cy.login(signIn.email, signIn.password);
+    });
 });

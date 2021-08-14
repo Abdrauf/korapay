@@ -1,18 +1,14 @@
 {
-  "testFiles": "**/*.feature",
-  "ignoreTestFiles": [
-    "*.js",
-    "*.ts",
-    "*.md"
-  ],
+  "testFiles": "**/*.{feature,features}",
   "viewportWidth": 1360,
   "viewportHeight": 790,
+  "defaultCommandTimeout": 30000,
   "video": true,
-  "pageLoadTimeout": 1000000,
-  "theme": "halloween",
+  "pageLoadTimeout": 120000,
   "darkMediaQuery": false,
   "chromeWebSecurity": false,
   "retries": 0,
+  "baseUrl": "https://alphapay.netlify.app/",
 
   "reporter": "../node_modules/mochawesome/src/mochawesome.js",
   "reporterOptions" : {

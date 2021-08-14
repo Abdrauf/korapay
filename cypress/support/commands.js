@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+       import PageAction from "../integration/Pages/loginPage";
+       const Pages = new PageAction()
+
+  Cypress.Commands.add('login', (Email, Password)=> {
+       cy.clearCookies();
+       cy.clearLocalStorage();
+       cy.fixture("signIn").then((signIn)=>{
+       Pages.clickAnElement(signIn.signInLink);
+       Pages.insertValue(signIn.userName, Email);
+       Pages.insertValue(signIn.userPassword, Password);
+       Pages.clickAnElement(signIn.signInBtn);
+       Pages.viewElementText(signIn.dashPayment,'Payments');
+       Pages.viewElementText(signIn.dashOverview, 'Overview');
+   });
+});

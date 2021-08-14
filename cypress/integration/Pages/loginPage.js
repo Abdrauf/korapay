@@ -1,41 +1,15 @@
-const koraPayUrl = "https://alphapay.netlify.app/"
-const signInLink = 'a > .btn'
-const userName = ':nth-child(1) > input'
-const userPassword = '.password'
-const signInBtn = '.button'
-const dashPayment = '.nav-list > [href="/dashboard/payments"] > span'
-const dashOverview = '.nav-list > .active > span'
-//const loginNotification ='.go1415219401'
-
-
-
-
-class login{
-
-    static visitUrl (){
-        cy.visit(koraPayUrl)
-
+class PageAction {
+    clickAnElement(ID){
+        cy.get(ID).click();
     }
-
-    static clickSignIn(){
-        cy.get(signInLink).click()
+    insertValue(field, text){
+        cy.get(field).type(text);
     }
-    static inputUserCredentials(Email, Password){
-        cy.get(userName).type(Email, {log:false})
-        cy.get(userPassword).type(Password,{log:false})
-
+    waitForElement(ID){
+        cy.get(ID).should('be.visible');
     }
-    static clickLogin(){
-        cy.get(signInBtn).click()
+    viewElementText(ID, text){
+        cy.get(ID).should("contain", text)
     }
-
-    static assertDashboard(){
-        cy.get(dashOverview).click().should("contain.text", 'Overview')
-        cy.get(dashPayment).click().should("contain.text", 'Payments')
-      //  cy.get(loginNotification).should("contain.text", 'Welcome to your dashboard')
-
-    }
-
-
-
-}export default login
+}
+export default PageAction

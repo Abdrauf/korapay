@@ -1,0 +1,6 @@
+{
+  "profileLink":".dashboard_nav_profile",
+   "logOutLink": "[href='/coming-soon']",
+   "logOutValidation": ".head_info"
+
+}

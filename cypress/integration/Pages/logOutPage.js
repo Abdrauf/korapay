@@ -1,18 +1,19 @@
-const profileLink = '.dashboard_nav_profile'
-const logOutLink = '[href="/coming-soon"]'
-const logOutValidation = '.head_info'
 
-class logOut {
-    static clickProfile(){
-        cy.get(profileLink).click()
+class PageAction {
+    clickAnElement(ID){
+        cy.get(ID).click();
     }
-    static clickLogOut(){
-        cy.get(logOutLink).click({force:true})
+    insertValue(field, text){
+        cy.get(field).type(text);
     }
-    static assertLogOut(){
-        cy.get(logOutValidation).should("contain.text",'Welcome back, Please log in to your account to access your dashboard')
+    waitForElement(ID){
+        cy.get(ID).should('be.visible');
     }
-}export default logOut
+    viewElementText(ID, text){
+        cy.get(ID).should("contain", text)
+    }
+}
+export default PageAction
 
 
 

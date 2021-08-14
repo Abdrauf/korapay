@@ -1,0 +1,10 @@
+{
+"email": "ade@mailinator.com",
+"password":"M@thematics11",
+"signInLink": "a > .btn",
+"userName":":nth-child(1) > input",
+"userPassword":".password",
+"signInBtn":".button",
+"dashPayment":".nav-list > [href='/dashboard/payments'] > span",
+"dashOverview":".nav-list > .active > span"
+}

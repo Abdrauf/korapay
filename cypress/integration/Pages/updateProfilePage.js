@@ -1,25 +1,18 @@
-const profileLink = '.dashboard_nav_profile'
-const fullName = 'form > :nth-child(1) > input'
-const userName = ':nth-child(2) > input'
-const updateLink = 'form > .button'
-const dashLink = '.nav-list > [href="/dashboard/overview"] > span'
-
-
-class updateProfile {
-    static clickProfile(){
-        cy.get(profileLink).click()
+class PageAction {
+    clickAnElement(ID){
+        cy.get(ID).click();
     }
-    static enterFullName(){
-        cy.get(fullName).clear().type('Terry Juan', {log:false})
+    insertValue(field, text){
+        cy.get(field).type(text);
     }
-    static enterUserName(){
-        cy.get(userName).clear().type('BLACK CAMARU',{log:false})
+    waitForElement(ID){
+        cy.get(ID).should('be.visible');
     }
-    static clickUpdateAccount(){
-        cy.get(updateLink).click()
+    viewElementText(ID, text){
+        cy.get(ID).should("contain", text)
     }
-    static clickOverview(){
-        cy.get(dashLink).click()
+    clearField(ID){
+        cy.get(ID).clear();
     }
-}export default updateProfile
-
+}
+export default PageAction

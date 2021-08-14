@@ -1,36 +1,32 @@
 import {Given, Then} from "cypress-cucumber-preprocessor/steps";
-import loginPage from "../pages/loginPage";
+import PageAction from "../Pages/logOutPage";
 
-Given(/^User visit the alphaPay application$/, function (){
-    loginPage.visitUrl()
-});
-
-Then (/^User click sign in$/, function () {
-    loginPage.clickSignIn()
-});
-Then (/^Inputs Email as "([^"]*)" and password as "([^"]*)"$/, function (Email, Password) {
-    loginPage.inputUserCredentials(Email, Password)
-});
-Then (/^User clicks on login button$/, function () {
-    loginPage.clickLogin()
-});
-
-Then (/^User should be redirected to the dashboard$/, function () {
-    loginPage.assertDashboard()
-});
+const Pages = new PageAction()
 
 
-import logOutPage from "../Pages/logOutPage";
+Given (/^User visit and Login to the alphaPay application$/, function () {
+    cy.visit('/');
+    cy.fixture('signIn').then((signIn)=>{
+        // created a custom command for login to reduce the lines of codes
+        cy.login(signIn.email, signIn.password);
+    });
+});
 
 
 Then (/^Click Profile Page$/, function () {
-logOutPage.clickProfile()
+    cy.fixture("logOut").then((logOut)=>{
+        Pages.clickAnElement(logOut.profileLink)
+    })
 });
 
 Then (/^User click logOut$/, function () {
-logOutPage.clickLogOut()
+    cy.fixture("logOut").then((logOut)=>{
+        Pages.clickAnElement(logOut.logOutLink)
+    })
 });
 
 Then (/^Return to sign in Page$/, function () {
-logOutPage.assertLogOut()
+    cy.fixture("logOut").then((logOut)=>{
+        Pages.waitForElement(logOut.logOutValidation)
+    })
 });

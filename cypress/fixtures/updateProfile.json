@@ -1,0 +1,7 @@
+{
+  "profileLink":".dashboard_nav_profile",
+  "fullName" : "form > :nth-child(1) > input",
+  "userName" : ":nth-child(2) > input",
+  "updateLink" : "form > .button",
+  "dashLink" :".nav-list > [href='/dashboard/overview'] > span"
+}
